@@ -14,6 +14,7 @@ The Assert class extends PHPUnit, therefore you get all the previous functionali
 
 ### Assert Equals
 
+#### Standard PHPUnit
 ```PHP
     $this->assertEquals($expected, $actual);
 
@@ -22,6 +23,7 @@ The Assert class extends PHPUnit, therefore you get all the previous functionali
     $this->assertEquals($expected, $actual, $message);
 ```
 
+#### PHPUnit Wrapper
 ```PHP
     $this->expected('abc')
                 ->equals('abc');
@@ -35,10 +37,12 @@ The Assert class extends PHPUnit, therefore you get all the previous functionali
 
 ### Assert NOT Equals
 
+#### Standard PHPUnit
 ```PHP
     $this->assertNotEquals($expected, $actual, $message);
 ```
 
+#### PHPUnit Wrapper
 ```PHP
     $this->expected('abc')
             ->notEquals('abcd');
