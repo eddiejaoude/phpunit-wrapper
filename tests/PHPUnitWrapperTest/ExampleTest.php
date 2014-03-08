@@ -4,7 +4,7 @@ namespace EddieJaoude\PHPUnitWrapperTest;
 use EddieJaoude\PHPUnitWrapper\Assert;
 
 /**
- * Class Example2Test
+ * Class ExampleTest
  *
  * @package EddieJaoude\PHPUnitWrapperTest
  */
