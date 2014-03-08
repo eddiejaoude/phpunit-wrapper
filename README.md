@@ -48,5 +48,40 @@ The Assert class extends PHPUnit, therefore you get all the previous functionali
             ->notEquals('abcd');
 ```
 
+### Complete Example
 
+```PHP
+<?php
+namespace EddieJaoude\PHPUnitWrapperTest;
+
+use EddieJaoude\PHPUnitWrapper\Assert;
+
+/**
+ * Class Example2Test
+ *
+ * @package EddieJaoude\PHPUnitWrapperTest
+ */
+class ExampleTest extends Assert
+{
+
+    /*
+     * Example of 'assert' & 'equals'
+     */
+    public function testAssertEquals()
+    {
+        $this->expected('abc')
+            ->equals('abc');
+    }
+
+    /*
+     * Example of 'assert' & 'equals'
+     */
+    public function testAssertNotEquals()
+    {
+        $this->expected('abc')
+            ->notEquals('abcd');
+    }
+}
+
+```
 
