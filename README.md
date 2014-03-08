@@ -1,6 +1,6 @@
 # phpunit-wrapper
 
-PHPUnit wrapper - wraps the functionality of phpunit with easy to use *plain English*
+PHPUnit wrapper - wraps the functionality of phpunit with easy to use `plain & simple English`
 
 ## Installation via Composer
 ```
