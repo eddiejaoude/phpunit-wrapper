@@ -2,6 +2,8 @@
 
 PHPUnit wrapper - wraps the functionality of phpunit with easy to use `plain & simple English`
 
+---
+
 ## Installation via Composer
 ```
     "require" : {
@@ -9,12 +11,15 @@ PHPUnit wrapper - wraps the functionality of phpunit with easy to use `plain & s
     }
 ```
 
+---
 
 ## Examples
 
 Instead of extending `\PHPUnit_Framework_TestCase`, extend `\EddieJaoude\PHPUnitWrapper\Assert`.
 
 The Assert class extends PHPUnit, therefore you get all the previous functionality & your previous unit tests will not fail.
+
+---
 
 ### Assert Equals
 
@@ -51,6 +56,74 @@ The Assert class extends PHPUnit, therefore you get all the previous functionali
     $this->expected('abc')
             ->notEquals('abcd');
 ```
+
+---
+
+### Contains
+
+#### Standard PHPUnit
+```PHP
+    $this->assertContains($needle, $haystack);
+
+    // or with custom message
+
+    $this->assertContains($needle, $haystack, $message);
+```
+
+#### PHPUnit Wrapper
+```PHP
+    $this->value($needle)
+            ->exists($haystack);
+
+    $this->value('b')
+            ->exists(
+                array('a', 'b', 'c')
+            );
+
+    // or with custom message
+
+    $this->value('b')
+            ->setMessage('Failure, does not exist!') // optional
+            ->exists(
+                array('a', 'b', 'c')
+            );
+```
+
+### NOT Contains
+
+#### Standard PHPUnit
+```PHP
+    $this->assertContains($needle, $haystack);
+
+    // or with custom message
+
+    $this->assertContains($needle, $haystack, $message);
+```
+
+#### PHPUnit Wrapper
+```PHP
+    $this->value($needle)
+            ->notExists($haystack);
+
+    $this->value('b')
+            ->notExists(
+                array('a', 'c')
+            );
+
+    // or with custom message
+
+    $this->value('b')
+            ->setMessage('Failure, does exist!') // optional
+            ->notExists(
+                array('a', 'c')
+            );
+```
+
+---
+
+
+
+---
 
 ### Complete Example
 
