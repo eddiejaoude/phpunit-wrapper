@@ -2,11 +2,11 @@
 namespace EddieJaoude\PHPUnitWrapper;
 
 /**
- * Class Equals
+ * Class Contains
  *
  * @package EddieJaoude\PHPUnitWrapper
  */
-trait Equals
+trait Contains
 {
 
     /**
@@ -29,7 +29,7 @@ trait Equals
      *
      * @return Assert
      */
-    public function expected($data)
+    public function value($data)
     {
         $this->expected = $data;
 
@@ -41,9 +41,9 @@ trait Equals
      *
      * @return Assert
      */
-    public function equals($data)
+    public function exists($data)
     {
-        $this->assertEquals($this->expected, $data, $this->message);
+        $this->assertContains($this->expected, $data, $this->message);
 
         return $this;
     }
@@ -53,9 +53,9 @@ trait Equals
      *
      * @return Assert
      */
-    public function notEquals($data)
+    public function notExists($data)
     {
-        $this->assertNotEquals($this->expected, $data, $this->message);
+        $this->assertNotContains($this->expected, $data, $this->message);
 
         return $this;
     }

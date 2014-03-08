@@ -16,4 +16,22 @@ class Assert extends PHPUnit_Framework_TestCase
      * Including Not Equals
      */
     use Equals;
+
+    /**
+     * Trait for Contains
+     * Including Not Contains
+     */
+    use Contains;
+
+    /**
+     * @param mixed $data
+     *
+     * @return Assert
+     */
+    public function setMessage($data)
+    {
+        $this->message = $data;
+
+        return $this;
+    }
 }
