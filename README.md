@@ -2,8 +2,14 @@
 
 PHPUnit wrapper - wraps the functionality of phpunit with easy to use plain English
 
-## Installation
-
+## Installation via Composer
+```JSON
+...
+    "require" : {
+        "EddieJaoude\PHPUnitWrapper" : "0.*"
+    }
+...
+```
 
 
 ## Examples
