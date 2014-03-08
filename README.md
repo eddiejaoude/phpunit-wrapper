@@ -93,11 +93,11 @@ The Assert class extends PHPUnit, therefore you get all the previous functionali
 
 #### Standard PHPUnit
 ```PHP
-    $this->assertContains($needle, $haystack);
+    $this->assertNotContains($needle, $haystack);
 
     // or with custom message
 
-    $this->assertContains($needle, $haystack, $message);
+    $this->assertNotContains($needle, $haystack, $message);
 ```
 
 #### PHPUnit Wrapper
@@ -125,7 +125,7 @@ The Assert class extends PHPUnit, therefore you get all the previous functionali
 
 ---
 
-### Complete Example
+### Complete usage simple Example
 
 ```PHP
 <?php
@@ -134,7 +134,7 @@ namespace EddieJaoude\PHPUnitWrapperTest;
 use EddieJaoude\PHPUnitWrapper\Assert;
 
 /**
- * Class Example2Test
+ * Class ExampleTest
  *
  * @package EddieJaoude\PHPUnitWrapperTest
  */
