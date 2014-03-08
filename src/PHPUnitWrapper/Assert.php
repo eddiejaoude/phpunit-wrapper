@@ -12,6 +12,21 @@ class Assert extends PHPUnit_Framework_TestCase
 {
 
     /**
+     * @var mixed
+     */
+    private $expected;
+
+    /**
+     * @var mixed
+     */
+    private $equals;
+
+    /**
+     * @var mixed
+     */
+    private $message;
+
+    /**
      * Trait for Equals
      * Including Not Equals
      */

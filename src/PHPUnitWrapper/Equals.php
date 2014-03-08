@@ -10,21 +10,6 @@ trait Equals
 {
 
     /**
-     * @var mixed
-     */
-    private $expected;
-
-    /**
-     * @var mixed
-     */
-    private $equals;
-
-    /**
-     * @var mixed
-     */
-    private $message;
-
-    /**
      * @param mixed $data
      *
      * @return Assert
