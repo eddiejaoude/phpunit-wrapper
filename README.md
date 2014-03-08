@@ -1,3 +1,8 @@
+[![Build Status](https://travis-ci.org/eddiejaoude/phpunit-wrapper.png)](https://travis-ci.org/eddiejaoude/phpunit-wrapper)
+[![Coverage Status](https://coveralls.io/repos/eddiejaoude/phpunit-wrapper/badge.png?branch=master)](https://coveralls.io/r/eddiejaoude/phpunit-wrapper?branch=master)
+[![Total Downloads](https://poser.pugx.org/eddiejaoude/phpunit-wrapper/downloads.png)](https://packagist.org/packages/eddiejaoude/phpunit-wrapper)
+
+
 # PHPUnitWrapper / phpunit-wrapper
 
 PHPUnit wrapper - wraps the functionality of phpunit with easy to use `plain & simple English`
