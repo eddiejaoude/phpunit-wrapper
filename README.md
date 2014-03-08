@@ -18,7 +18,7 @@ The Assert class extends PHPUnit, therefore you get all the previous functionali
 ```PHP
     $this->assertEquals($expected, $actual);
 
-    // or
+    // or with custom message
 
     $this->assertEquals($expected, $actual, $message);
 ```
@@ -28,7 +28,7 @@ The Assert class extends PHPUnit, therefore you get all the previous functionali
     $this->expected('abc')
                 ->equals('abc');
 
-    // or
+    // or with custom message
 
     $this->expected('abc')
             ->setMessage('Failure, these are not equal!') // optional
