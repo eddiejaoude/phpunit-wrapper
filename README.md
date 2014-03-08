@@ -15,11 +15,21 @@ The Assert class extends PHPUnit, therefore you get all the previous functionali
 ### Assert Equals
 
 ```PHP
+    $this->assertEquals($expected, $actual);
+
+    // or
+
     $this->assertEquals($expected, $actual, $message);
 ```
 
 ```PHP
     $this->expected('abc')
+                ->equals('abc');
+
+    // or
+
+    $this->expected('abc')
+            ->setMessage('Failure, these are not equal!') // optional
             ->equals('abc');
 ```
 
