@@ -1,4 +1,4 @@
-# phpunit-wrapper
+# PHPUnitWrapper / phpunit-wrapper
 
 PHPUnit wrapper - wraps the functionality of phpunit with easy to use `plain & simple English`
 
@@ -12,7 +12,7 @@ PHPUnit wrapper - wraps the functionality of phpunit with easy to use `plain & s
 
 ## Examples
 
-Instead of extending ```\PHPUnit_Framework_TestCase```, extend ```\EddieJaoude\PHPUnitWrapper\Assert```.
+Instead of extending `\PHPUnit_Framework_TestCase`, extend `\EddieJaoude\PHPUnitWrapper\Assert`.
 
 The Assert class extends PHPUnit, therefore you get all the previous functionality & your previous unit tests will not fail.
 
