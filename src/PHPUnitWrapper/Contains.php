@@ -14,9 +14,9 @@ trait Contains
      *
      * @return Assert
      */
-    public function value($data)
+    public function existsIn($data)
     {
-        $this->expected = $data;
+        $this->assertContains($this->expectedValue, $data, $this->message);
 
         return $this;
     }
@@ -26,21 +26,9 @@ trait Contains
      *
      * @return Assert
      */
-    public function exists($data)
+    public function notExistsIn($data)
     {
-        $this->assertContains($this->expected, $data, $this->message);
-
-        return $this;
-    }
-
-    /**
-     * @param mixed $data
-     *
-     * @return Assert
-     */
-    public function notExists($data)
-    {
-        $this->assertNotContains($this->expected, $data, $this->message);
+        $this->assertNotContains($this->expectedValue, $data, $this->message);
 
         return $this;
     }

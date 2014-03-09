@@ -16,8 +16,8 @@ class ContainsTest extends Assert
      */
     public function testContains()
     {
-        $this->value('b')
-            ->exists(
+        $this->expectedValue('b')
+            ->existsIn(
                 array('a', 'b', 'c')
             );
     }
@@ -27,8 +27,8 @@ class ContainsTest extends Assert
      */
     public function testNotContains()
     {
-        $this->value('b')
-            ->notExists(
+        $this->expectedValue('b')
+            ->notExistsIn(
                 array('a', 'c')
             );
     }
@@ -43,9 +43,9 @@ class ContainsTest extends Assert
         $message = 'Failed test';
 
         try {
-            $this->value('b')
+            $this->expectedValue('b')
                 ->setMessage($message)
-                ->exists(
+                ->existsIn(
                     array('a', 'c')
                 );
         } catch (\Exception $e) {

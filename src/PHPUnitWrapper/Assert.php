@@ -12,9 +12,21 @@ class Assert extends PHPUnit_Framework_TestCase
 {
 
     /**
+     * Trait for Equals
+     * Including Not Equals
+     */
+    use Equals;
+
+    /**
+     * Trait for Contains
+     * Including Not Contains
+     */
+    use Contains;
+
+    /**
      * @var mixed
      */
-    private $expected;
+    private $expectedValue;
 
     /**
      * @var mixed
@@ -27,16 +39,16 @@ class Assert extends PHPUnit_Framework_TestCase
     private $message;
 
     /**
-     * Trait for Equals
-     * Including Not Equals
+     * @param mixed $data
+     *
+     * @return Assert
      */
-    use Equals;
+    public function expectedValue($data)
+    {
+        $this->expectedValue = $data;
 
-    /**
-     * Trait for Contains
-     * Including Not Contains
-     */
-    use Contains;
+        return $this;
+    }
 
     /**
      * @param mixed $data

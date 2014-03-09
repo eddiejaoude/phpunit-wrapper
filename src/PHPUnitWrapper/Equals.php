@@ -14,21 +14,9 @@ trait Equals
      *
      * @return Assert
      */
-    public function expected($data)
-    {
-        $this->expected = $data;
-
-        return $this;
-    }
-
-    /**
-     * @param mixed $data
-     *
-     * @return Assert
-     */
     public function equals($data)
     {
-        $this->assertEquals($this->expected, $data, $this->message);
+        $this->assertEquals($this->expectedValue, $data, $this->message);
 
         return $this;
     }
@@ -40,7 +28,7 @@ trait Equals
      */
     public function notEquals($data)
     {
-        $this->assertNotEquals($this->expected, $data, $this->message);
+        $this->assertNotEquals($this->expectedValue, $data, $this->message);
 
         return $this;
     }

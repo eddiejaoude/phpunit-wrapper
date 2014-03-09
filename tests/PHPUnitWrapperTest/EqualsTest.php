@@ -16,7 +16,7 @@ class EqualsTest extends Assert
      */
     public function testEquals()
     {
-        $this->expected('abc')
+        $this->expectedValue('abc')
             ->equals('abc');
     }
 
@@ -25,7 +25,7 @@ class EqualsTest extends Assert
      */
     public function testNotEquals()
     {
-        $this->expected('abc')
+        $this->expectedValue('abc')
             ->notEquals('abcd');
     }
 
@@ -39,7 +39,7 @@ class EqualsTest extends Assert
         $message = 'Failed test';
 
         try {
-            $this->expected('abc')
+            $this->expectedValue('abc')
                 ->setMessage($message)
                 ->equals('cba');
         } catch (\Exception $e) {
