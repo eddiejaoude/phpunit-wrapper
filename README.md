@@ -7,7 +7,7 @@
 
 PHPUnit wrapper - wraps the functionality of phpunit with easy to use `plain & simple English`
 
-`Note: Your existing standard PHPUnit tests will not fail, they will continue to work fine. This is an enhancement`
+`Note: Your existing standard PHPUnit tests will not fail, they will continue to work fine`
 
 ---
 
@@ -168,4 +168,17 @@ class ExampleTest extends Assert
 }
 
 ```
+
+---
+
+### Contribution
+
+Fork, Pull Request - with `Tests` & `Updated README with examples` please
+
+---
+
+### Suggestions / Ideas
+
+Please create an `Issue`
+
 
