@@ -7,6 +7,8 @@
 
 PHPUnit wrapper - wraps the functionality of phpunit with easy to use `plain & simple English`
 
+`Note: Your existing standard PHPUnit tests will not fail, they will continue to work fine. This is an enhancement`
+
 ---
 
 ## Installation via Composer
