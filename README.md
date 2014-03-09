@@ -39,12 +39,12 @@ The Assert class extends PHPUnit, therefore you get all the previous functionali
 
 #### PHPUnit Wrapper
 ```PHP
-    $this->expected('abc')
+    $this->expectedValue('abc')
                 ->equals('abc');
 
     // or with custom message
 
-    $this->expected('abc')
+    $this->expectedValue('abc')
             ->setMessage('Failure, these are not equal!') // optional
             ->equals('abc');
 ```
@@ -58,7 +58,7 @@ The Assert class extends PHPUnit, therefore you get all the previous functionali
 
 #### PHPUnit Wrapper
 ```PHP
-    $this->expected('abc')
+    $this->expectedValue('abc')
             ->notEquals('abcd');
 ```
 
@@ -77,19 +77,19 @@ The Assert class extends PHPUnit, therefore you get all the previous functionali
 
 #### PHPUnit Wrapper
 ```PHP
-    $this->value($needle)
-            ->exists($haystack);
+    $this->expectedValue($needle)
+            ->existsIn($haystack);
 
-    $this->value('b')
-            ->exists(
+    $this->expectedValue('b')
+            ->existsIn(
                 array('a', 'b', 'c')
             );
 
     // or with custom message
 
-    $this->value('b')
+    $this->expectedValue('b')
             ->setMessage('Failure, does not exist!') // optional
-            ->exists(
+            ->existsIn(
                 array('a', 'b', 'c')
             );
 ```
@@ -107,19 +107,19 @@ The Assert class extends PHPUnit, therefore you get all the previous functionali
 
 #### PHPUnit Wrapper
 ```PHP
-    $this->value($needle)
-            ->notExists($haystack);
+    $this->expectedValue($needle)
+            ->notExistsIn($haystack);
 
-    $this->value('b')
-            ->notExists(
+    $this->expectedValue('b')
+            ->notExistsIn(
                 array('a', 'c')
             );
 
     // or with custom message
 
-    $this->value('b')
+    $this->expectedValue('b')
             ->setMessage('Failure, does exist!') // optional
-            ->notExists(
+            ->notExistsIn(
                 array('a', 'c')
             );
 ```
@@ -151,7 +151,7 @@ class ExampleTest extends Assert
      */
     public function testAssertEquals()
     {
-        $this->expected('abc')
+        $this->expectedValue('abc')
             ->equals('abc');
     }
 
@@ -160,7 +160,7 @@ class ExampleTest extends Assert
      */
     public function testAssertNotEquals()
     {
-        $this->expected('abc')
+        $this->expectedValue('abc')
             ->notEquals('abcd');
     }
 }
