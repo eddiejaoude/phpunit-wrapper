@@ -20,7 +20,7 @@ PHPUnit wrapper - wraps the functionality of phpunit with easy to use `plain & s
 
 ---
 
-## Examples
+## Usage
 
 Instead of extending `\PHPUnit_Framework_TestCase`, extend `\EddieJaoude\PHPUnitWrapper\Assert`.
 
